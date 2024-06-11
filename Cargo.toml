@@ -1,0 +1,16 @@
+[package]
+name = "medata"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+resolver = "2"
+members = ["models", "service"]
+
+[dependencies]
+shuttle-axum = "0.45.0"
+shuttle-runtime = "0.45.0"
+shuttle-shared-db = { version = "0.45.0", features = ["postgres", "sqlx"] }
+tokio = "1.38.0"
+service = { path = "service" }
+models = { path = "models" }
